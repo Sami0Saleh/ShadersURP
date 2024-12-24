@@ -17,11 +17,6 @@ public class HealthBarController : MonoBehaviour
             Vector3 newScale = _healthBarPlane.localScale;
             newScale.x = _healthValue; // Adjust the X-scale according to health
             _healthBarPlane.localScale = newScale;
-
-            // Adjust the position of the plane to move from right to left
-            Vector3 newPosition = _healthBarPlane.localPosition;
-            newPosition.x = -(1f - _healthValue) * 0.5f; // Offset by half the shrinkage
-            _healthBarPlane.localPosition = newPosition;
         }
     }
 }
